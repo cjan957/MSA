@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>:: Currency Converter ::</title>
+        <!--Boostrap's CSS-->
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" href="./css/chosen.min.css">
+        <link rel="stylesheet" href="./css/alertify.css" />
+        <link rel="stylesheet" href="./css/semantic.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <script>
+            window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '189621598116581',
+             xfbml     : true,
+            version    : 'v2.7'
+            });
+        };
+
+        (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+       </script>
+        <div class = "container" id="page-container">
+            <h2>Foreign Exchange Calculator</h2>
+            <br>
+             New Zealand Dollar (NZD) : <input type="number" autocomplete="off" name="name" id="nzdAmount" placeholder="$" autofocus>
+             <h4>to</h4>
+            <select name="currencyList" id="currency" class="names">
+                <option value="XXX">Currency</option>
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="CNY">Chinese Yuan (CNY)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="HKD">Hong Kong Dollar (HKD)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="MYR">Malaysian Ringgit (MYR)</option>
+                <option value="KRW">South Korean Won (KRW)</option>
+                <option value="THB">Thai Baht (THB)</option>
+                <option value="USD">US Dollar (USD)</option>
+        </select>
+                
+                <input type="button" id="action-button" value="Convert" >
+            <br>
+            <br>
+            <table id="table">
+                <tr>
+                    <th>New Zealand Dollar</th>
+                    <th>Exchange Rates</th>
+                    <th id="symbol">Conversion Result</th>
+                </tr>
+                <tr>
+                    <td id="inputSpace">0.00</td>
+                    <td id="rateSpace">0.00</td>
+                    <td id="resultSpace">0.00</td>
+                </tr>
+            </table>
+            <br>
+            <p>This service is powered by fixer.io</p>
+              <div
+                class="fb-like"
+                data-share="true"
+                data-width="450"
+                data-show-faces="true">
+            </div>
+
+            </div>
+            <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+            <!--Bootstrap Script-->
+            <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!--Custom Script-->
+            <script src="./js/logic.js"></script>
+            <script type="text/javascript" src="./js/jquery.min.js"></script>
+            <script type="text/javascript" src="./js/chosen.jquery.min.js"></script>
+            <script src="./js/alertify.min.js"></script>
+    </body>
+</html>
+
