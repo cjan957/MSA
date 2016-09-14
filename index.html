@@ -8,12 +8,13 @@
         <!--Custom CSS-->
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" href="./css/chosen.min.css">
-        <link rel="stylesheet" href="./css/alertify.css" />
+        <link rel="stylesheet" href="./css/FakeLoader.css" />
         <link rel="stylesheet" href="./css/semantic.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
+        <div id="fakeLoader"></div>
         <script>
             window.fbAsyncInit = function() {
             FB.init({
@@ -50,7 +51,7 @@
                 <option value="USD">US Dollar (USD)</option>
         </select>
                 
-                <input type="button" id="action-button" value="Convert" >
+                <input type="button" id="mySubmit" onclick="getCurrency()" value="Convert" >
             <br>
             <br>
             <table id="table">
@@ -82,7 +83,20 @@
             <script src="./js/logic.js"></script>
             <script type="text/javascript" src="./js/jquery.min.js"></script>
             <script type="text/javascript" src="./js/chosen.jquery.min.js"></script>
-            <script src="./js/alertify.min.js"></script>
+            <script src="./js/FakeLoader.js"></script>
+            <script type="text/javascript">
+                $("fakeLoader").fakeLoader();
+            </script>
+            <script type="text/javascript">
+                $("#fakeLoader").fakeLoader({
+                timeToHide:1200, //Time in milliseconds for fakeLoader disappear
+                zIndex:"999",//Default zIndex
+                spinner:"spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+                bgColor:"#5151CE", //Hex, RGB or RGBA colors
+                //imagePath:"yourPath/customizedImage.gif" //If you want can you insert your custom image
+                });
+</script>
+
     </body>
 </html>
 
