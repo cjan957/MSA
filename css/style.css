@@ -1,5 +1,5 @@
 html{ /** CSS for the page overall**/
-    background: url(back.jpg); 
+    background: url(../img/back.jpg); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

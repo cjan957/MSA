@@ -44,7 +44,7 @@ function getCurrency():void{
 function calculation(rates){
     var nzAmount:number = (<HTMLInputElement>document.getElementById("nzdAmount")).valueAsNumber;
     var finalResult:number = nzAmount * rates;
-    document.getElementById("inputSpace").innerHTML = "$NZ "+nzAmount;
+    document.getElementById("inputSpace").innerHTML = "$"+nzAmount;
     document.getElementById("rateSpace").innerHTML = $result;
     document.getElementById("resultSpace").innerHTML = finalResult.toFixed(2);
     document.getElementById("symbol").innerHTML = "Conversion Result ("+$symbol+")";
